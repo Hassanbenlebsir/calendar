@@ -274,8 +274,9 @@
             weekdays: ['sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat'],
         };
         var settings = $.extend({}, defaults, opts);
-	if(settings.even)
+	if(settings.availability == null)
 	{
+		console.log('no data')
 		return;	
 	}
         var html = ``;
