@@ -256,6 +256,7 @@
         render();
     };
     $.fn.initmarkyourcalendar = function(opts) {
+	
         var prevHtml = `
             <div id="myc-prev-week">
                 <
@@ -273,6 +274,10 @@
             weekdays: ['sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat'],
         };
         var settings = $.extend({}, defaults, opts);
+	if(settings.even)
+	{
+		return;	
+	}
         var html = ``;
 
         var onClick = settings.onClick;
